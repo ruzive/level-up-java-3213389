@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class App {
 
     public static boolean isPasswordComplex(String password) {
-        return false;
+        String regexString ="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).+$";
+        return (password.length() > 6 && password.matches(regexString)) ? true : false;
+
     }
 
     public static void main(String[] args) {
